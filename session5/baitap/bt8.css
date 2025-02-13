@@ -1,0 +1,23 @@
+.line{
+    border-top: 2px dashed gray;
+}
+.right{
+    
+    border-right: 2px solid rgba(128, 128, 128, 0.263);
+    padding-bottom: 50px;
+}
+.right2{
+    padding-bottom: 50px;
+}
+.time{
+    color: rgb(134, 137, 139);
+}
+.content{
+    color: rgb(8, 8, 54);
+    font-weight: 900px;
+    font-size: 30px;
+}
+.img{
+    height: 190px;
+    width: 200px;
+}

@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.beginning{
+    border-radius: 10px;
+    border: 1px solid rgb(144, 141, 141);
+    width: 700px;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+.content{
+    border-bottom: 1px solid rgb(144, 141, 141);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.content1{
+    border-bottom: 1px solid rgb(144, 141, 141);
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: rgba(0, 115, 255, 0.253);
+    color: rgb(4, 92, 151);
+}
+.content2{
+    
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.content3{
+    font-weight: 900;
+    
+}
+.content4{
+    color: rgba(218, 34, 218, 0.862);
+}
+i{
+    
+    position: absolute;
+    left: 650px;
+}

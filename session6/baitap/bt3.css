@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.button{
+    text-decoration: none;
+    color: azure;
+    padding-left: 7px;
+    font-size: 10px;
+    
+    
+}
+.button1{
+    text-decoration: none;
+    color: azure;
+    padding-left: 390px;
+    font-size: 10px;
+    
+}
+.therd{
+    background-color: black;
+    height: 100px;
+    
+}
+.headline{
+    color: azure;
+    display: inline-block;
+    padding-top: 35px;
+}
+.content1{
+    font-size: 10px;
+    vertical-align: middle;
+}
+.img{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    
+    
+}
+.trunk{
+    background-color: rgba(128, 128, 128, 0.296);
+    height: 130px;
+    
+}
+.button2{
+    height: 30px;
+    width: 170px;
+    border: none;
+    background-color: black;
+    color: azure;
+    border-radius: 7px;
+    margin-left: 13px;
+    
+}
+.conten{
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.Laughter{
+    background-color: rgba(128, 128, 128, 0.296);
+    height: 40px;
+    margin-top: 20px;
+}
+.content3{
+    font-size: 10px;
+    text-align: center;
+    color: rgb(88, 93, 98);
+    padding-top: 10px;
+}
+.button3{
+    text-decoration: none;
+    color: black;
+    
+}

@@ -1,0 +1,24 @@
+/* reset css
+đưa css về trạng thái mặc định 
+
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div{
+    background-color: rgb(226, 124, 22);
+    /* width: 200px; */
+    height: 200px;
+    color: aliceblue;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    border: 5px solid green;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: 20px;
+}

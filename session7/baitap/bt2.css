@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.thead{
+    background-color: rgb(194, 197, 200);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.thead2{
+    background-color: rgb(194, 197, 200);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 370px;
+    
+}
+.umbrella{
+    border-radius: 10px;
+    border: 1px solid rgba(117, 115, 115, 0.712);
+    background-color: white;
+    height: 250px;
+    width: 350px;
+    margin-left: 8px;
+    padding-top: 60px;
+}
+.umbrella h2{
+    color: rgb(186, 30, 30);
+}
+.umbrella p{
+    color: rgb(22, 22, 87);
+}

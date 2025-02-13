@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.button{
+    color: azure;
+    background-color: rgb(0, 149, 255);
+    border: 0px;
+    width: 50px;
+}
+.img{
+    margin-left: 300px;
+    border: 20px;
+    height: 100px;
+    border-radius: 100%;
+    text-align: right;
+    
+}
+.content{
+    margin-right: 300px;
+    font-size: 7px;
+    margin-bottom: 50px;
+    vertical-align: middle;
+}
+
+.headline{
+    text-align: center;
+    font-weight: 900px;
+    color: azure;
+    font-size: 30px;
+}
+.table{
+    background-color: rgb(0, 149, 255);
+    text-align: center;
+    height: 300px;
+    width: 900px;
+    
+}
+.White{
+    background-color: white;
+}
+.last{
+    background-color: rgb(183, 185, 187);
+    width: 100px;
+    height: 40px;
+}
+.thead{
+    height: 80px;
+}

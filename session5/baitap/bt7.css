@@ -1,0 +1,47 @@
+.table{
+    text-align: center;
+    height: 100px;
+    width: 1520px;
+    background-color: rgba(175, 176, 176, 0.299);
+    
+    
+}
+.body{
+    background-color: rgb(255, 255, 255);
+}
+.green{
+    
+    color: azure;
+    width: 70px;
+    height: 40px;
+    background-color:  rgb(19, 158, 19);
+    border: 0px;
+    
+}
+.gold{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(248, 224, 86);
+    border: 0px;
+}
+.red{
+    background-color: red;
+    color: azure;
+    width: 70px;
+    height: 40px;
+    border: 0px;
+}
+
+.caption{
+    line-height: 30px;
+    background-color: rgba(175, 176, 176, 0.299);
+    font-weight: bold;
+}
+.table2{
+    margin-left: 170px;
+
+}
+.therd{
+    background-color: rgb(22, 145, 246);
+    color: azure;
+}
