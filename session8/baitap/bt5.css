@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main1{
+    height: 260px;
+    background-color: rgba(213, 213, 213, 0.266);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+    padding-top: 20px;
+    opacity: 0.5;
+    font-weight: 500;
+}
+.main1 p{
+    padding-top: 20px;
+    line-height: 30px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+.main1 div{
+    border-top: 1px solid rgba(145, 143, 143, 0.355);
+    width: 50px;
+    margin-left: 730px;
+    
+}
+.button1{
+    margin-top: 40px;
+    border: none;
+    background-color: rgba(0, 157, 255, 0.808);
+    color: white;
+    height: 35px;
+    border-radius: 5px;
+    width: 100px;
+}   
+.button2{
+    height: 35px;
+    border-radius: 5px;
+    width: 100px;
+    border: 1px solid rgba(154, 153, 153, 0.441);
+    opacity: 0.5;
+    font-weight: 600;
+}
+.main2{
+    height: 260px;
+    background-color: rgba(213, 213, 213, 0.54);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.main2 i{
+    padding-top: 90px;
+    letter-spacing: 20px;
+    font-size: 30px;
+    opacity: 0.5;
+}
+.main2 p{
+    padding-top: 40px;
+    opacity: 0.5;
+}
+.Lines{
+    border-top: 2px solid rgba(171, 168, 168, 0.355);
+    width: 80px;
+    margin-left: 748px;}
+ .Lines1{
+    border-top: 2px solid rgba(171, 168, 168, 0.355);
+    width: 69px;
+    margin-left: 845px;
+}
+    
