@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main2{
+    background-color: black;
+    color: white;
+    height: 90px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+
+.main2 a{
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+    font-size: 10px;
+    padding-right: 15px;
+    
+}
+.main3{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(95, 95, 96, 0.092);
+    justify-content: space-evenly;
+}
+.main3 button{
+    background-color: black;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 4px;
+}
+.main4{
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.square{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 150px;
+    width: 700px;
+    
+}
+.square .item{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(110, 110, 110, 0.153);
+    align-content: center;
+    text-align: center;
+    color: rgba(93, 93, 93, 0.297);
+    border-radius: 3px;
+}
+.content1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 700px;
+}
+.main5{
+    height: 120px;
+    background-color: rgba(96, 97, 97, 0.103);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main5 p{
+    font-size: 13px;
+    opacity: 0.4;
+}
+.main6{
+    height: 50px;
+    background-color: black;
+    color: rgba(117, 117, 117, 0.408);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

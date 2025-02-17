@@ -1,0 +1,25 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main{
+        width: 710px;
+        height: 160px;
+        background-color: rgba(149, 149, 149, 0.308);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        border: 2px solid;
+    }
+    .content{
+        width: 170px;
+        height: 70px;
+        background-color: rgba(9, 184, 85, 0.768);
+        align-content: center;
+        text-align: center;
+        color: white;
+        border-radius: 3px;
+    }
