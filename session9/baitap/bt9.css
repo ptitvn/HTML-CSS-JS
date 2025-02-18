@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main1{
+    width: 750px;
+    height: 310px;
+    position: relative;
+}
+.main1 img{
+    height: 300px;
+    width: 740px;
+    position: absolute;
+}
+.main1 h2{
+    position: absolute;
+    color: white;
+    top: 200px;
+    left: 20px;
+}
+.main1 p{
+   position: absolute;
+    color: white;
+    top: 245px;
+    left: 20px;
+    font-size: 13px;
+}
+.main2 {
+    width: 750px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main2 img{
+    height: 150px;
+    width: 240px;
+    display: flex;
+    position: absolute;
+}
+.main2 .content1 h2{
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    word-spacing: 2px;
+
+}
+.main2 .content1 p{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+.main2 .content2 h2{
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    word-spacing: 2px;
+
+}
+.main2 .content2 p{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+.main2 .content3 h2{
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    word-spacing: 2px;
+
+}
+.main2 .content3 p{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+.main2 .content4 h2{
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    word-spacing: 2px;
+
+}
+.main2 .content4 p{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+.main2 .content6 h2{
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    word-spacing: 2px;
+
+}
+.main2 .content6 p{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+.main2 .content5 p{
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 26px;
+}
+.main2 .content5 button{
+    border: none;
+    border-radius: 5px;
+    height:30px;
+    width: 220px;
+    margin-top: 65px;
+    margin-left: 10px;
+    color: brown;
+    background-color: white;
+}
+.content5{
+    background-color: brown;
+}
+.main2 span{
+    
+    position: relative;
+    width: 240px;
+    height: 150px;
+    font-size: 10px;
+    margin-right: 10px;
+    
+
+}

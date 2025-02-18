@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: rgba(185, 186, 187, 0.432);
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-around;
+
+}
+.main1{
+    font-family: "Grechen Fuemen", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main2 {
+    width: 700px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+.main2 .content{
+    color: black;
+}
+.main2 a{
+    text-decoration: none;
+    color: rgba(135, 135, 136, 0.751);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main3{
+    width: 200px;
+}
+.main3 button{
+    height: 27px;
+    width: 90px;
+    margin-top: 12px;
+    color: white;
+    background-color: rgba(56, 76, 94, 0.96);
+    border: none;
+    border-radius: 5px;
+}
