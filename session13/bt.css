@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page{
+    position: relative;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    
+}
+.header .header1{
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 48px;
+    background-color: #000000;
+    color: white;
+  
+    font-family: "Poppins", serif;
+
+}
+.header .header1 .header2{
+    width: 860px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    left: 445px;
+    display: flex;
+    flex-direction: row;
+    gap: 231px;
+}
+.header1 .content1{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 550px;
+    height: 24px;
+}
+.header1 .content1 .az{
+    width: 474px;
+    height: 18px;
+    
+
+}
+.header1 .content1 .az p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    letter-spacing: 0%;
+}
+.header1 .content1 .button{
+    width: 68px;
+    height: 24px;
+
+}
+.header1 .header2 .content1 .button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.header1 .header2 .content2{
+    width: 78px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.header1 .header2 .content2 .language{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FAFAFA;
+    
+    
+}
+.header3{
+    width: 1170px;
+    height: 38px;
+    position: absolute;
+    top: 86px;
+    left: 135px;
+    display: flex;
+    flex-direction: row;
+    gap: 210px;
+}
+.header3 .headline{
+    width: 717px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 232px;
+}
+.header3 .headline .headline1{
+    width: 118px;
+    height: 24px;
+
+}
+.header3 .headline .headline1 h2{
+    color: #000000;
+    font-family: "inter";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 3%;
+}
+.header3 .headline .headline2{
+    width: 367px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    
+}
+.header3 .headline .headline2 .Home{
+    width: 48px;
+    height: 24px;
+    
+}
+.header3 .headline .headline2 .Home a{
+    font-family: "poppins";
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: #000000;
+}
+.header3 .headline .headline2 .contact{
+    width: 66px;
+    height: 24px;
+}
+.header3 .headline .headline2 .contact a{
+    font-family: "poppins";
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: #000000;
+}
+.header3 .headline .headline2 .about{
+    width: 48px;
+    height: 24px;
+
+}
+.header3 .headline .headline2 .about a{
+    font-family: "poppins";
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;  
+    color: #000000; 
+}
+.header3 .headline .headline2 .sign{
+    width: 61px;
+    height: 24px;
+    border-bottom: 1px solid #000000;
+
+}
+.header3 .headline .headline2 .sign a{
+    font-family: "poppins";
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;  
+    color: #000000; 
+}
+.header3 .search-bar{
+    width: 243px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    background-color: #F5F5F5;
+    align-items: center;
+    justify-content: center;
+}
+.header3 .search-bar .search-bar1{
+    width: 211px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+  
+}
+.header3 .search-bar .search-bar1 input{
+    width: 153px;
+    height: 18px;
+    opacity: 50%;
+    border: none;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    background-color: #F5F5F5;
+    outline: none;
+}
+.header3 .search-bar .img{
+    width: 24px;
+    height: 24px;
+}
+.header3 .search-bar .img img{
+    width: 16px;
+    height: 16px;
+    border: 1.5px;
+    color: #000000;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+.main{
+    width: 1305px;
+    height: 781px;
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 129px;
+}
+.main .main_img{
+    width: 919px;
+    height: 706px;
+    position: relative;
+    bottom: 75px;
+    left: -8px;
+}
+.main .main_img img{
+    width: 805px;
+    height: 781px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+}
+.main .main1{
+    width: 371px;
+    height: 530px;
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.main .main1 .main1_header{
+    width: 339px;
+    height: 78px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+.main .main1 .main1_header h2{
+    width: 339px;
+    height: 30px;
+    font-family: "inter";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 4%;
+}
+.main .main1 .main1_header p{
+    width: 191px;
+    height: 24px;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.main .main1 .Content{
+    width: 370px;
+    height: 176px;
+    display: flex;
+    flex-direction:column ;
+    gap: 40px;
+}
+.main .main1 .Content .Name input{
+    width: 370px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.238);
+    outline: none;
+}
+.main .main1 .Content .Name input::placeholder{
+    width: 49px;
+    height: 24px;
+    opacity: 40%;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+   
+}
+.main .main1 .Content .Email input{
+    width: 370px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.238);
+    outline: none;
+}
+.main .main1 .Content .Email input::placeholder{
+    width: 187px;
+    height: 24px;
+    opacity: 40%;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.main .main1 .Content .password input{
+    width: 370px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.238);
+    outline: none;
+}
+.main .main1 .Content .password input::placeholder{
+    width: 77px;
+    height: 24px;
+    opacity: 40%;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.main .main1 .log{
+    width: 371px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.main .main1 .log .login{
+    width: 371px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 16px 122px 16px 122px;
+    display: flex;
+    gap: 10px;
+    background-color: #DB4444;
+    color: white;
+    border: none;
+}
+.main .main1 .log .log2{
+    width: 371px;
+    height: 116px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    
+}
+.main .main1 .log .log2 .button_sign{
+    width: 371px;
+    height: 56px;
+    border: 1px solid #00000066;
+    padding: 16px 86px;
+    border-radius: 4px;
+    
+    
+}
+.main .main1 .log .log2 .button_sign .button_content{
+    width: 199px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.main .main1 .log .log2 .button_sign img{
+    width: 24px;
+    height: 24px;
+}
+.main .main1 .log .log2 .button_sign p{
+    width: 159px;
+    height: 24px;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.main .main1 .log .log2 .log2_content {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 248px;
+    height: 28px;
+    align-items: flex-end;
+    margin-left: 70px;
+}
+.main .main1 .log .log2 .log2_content p{
+    width: 185px;
+    height: 24px;
+    opacity: 70%;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.main .main1 .log .log2 .log2_content a{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.244);
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500px;
+    opacity: 70%;
+    font-size: 16px;
+    line-height: 24px;
+}
+.footter {
+    background-color:#000000;
+    position: absolute;
+    width: 1440px;
+    height: 440px;
+    top: 1121px;
+    color: white;
+}
+.footter .content{
+    
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    width: 1170px;
+    height: 236px;
+    position: relative;
+    top: 80px;
+    left: 135px;
+    gap: 87px;
+}
+.footter .content .container{
+    width: 217px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.footter .content .container .content1{
+    width: 206px;
+    height: 124px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+.footter .content .container .content2{
+    width: 217px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1.5px solid #FAFAFA;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+.footter .content .container .content2 input{
+    width: 130px;
+    height: 24px;
+    opacity: 40%;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FAFAFA;
+    background-color: #000000;
+    border: none;
+    outline: none;
+}
+.footter .content .container .content2 img{
+    width: 20px;
+    height: 18px;   
+}
+.footter .content .container2{
+    width: 175px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footter .content .container3{
+    width: 123px;
+    height: 236px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footter .content .container4{
+    width: 109px;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footter .content .container5{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+.footter .content .container5 .content1{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footter .content .container5 .content2{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.footter .content .container5 .icon{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
