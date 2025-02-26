@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Viết chương trình yêu cầu người dùng nhập điểm 3 môn
+        Toán, Lý, Hóa
+        Sau đó tính điểm trung bình, làm tròn 2 số sau dấu
+        phẩy.
+    -->
+        <!-- 
+        B1: khai báo 3 biến dùng prompt yêu cầu người dùng nhập
+        giá trị
+        B2: tạo biến average = (toán+lý+hóa)/3
+        B3: làm tròn, hiển thị kết quả
+        -->
+        <script>
+            let math= +prompt("mời nhập điểm toán");
+            let physics=+prompt("nhập điểm lý");
+            let chemistry=Number(prompt("nhập điểm hóa"));
+            let average= (math+physics+chemistry)/3;
+            let result= average.toFixed(2);
+            console.log("điểm trung bình",result);
+            
+            
+        </script>
+</body>
+</html>
