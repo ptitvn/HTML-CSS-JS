@@ -1,3 +1,3 @@
 console.log("wellcome to Rikkei Academy");
-alert("Quyết tâm học lập trình javascript");
-document.write("Chào mừng bạn đến RIKKEI")
+alert("Chào mừng bạn đến RIKKE");
+document.write(" Quyết tâm học lập trình javascript");
