@@ -1,0 +1,12 @@
+let number = Math.abs(-5.5);
+let number2 = Math.abs(10);
+console.log(`${number} và ${number2} Hàm math.abs trong lập trình thường được sử dụng để tính giá trị tuyệt đối của một số. Giá trị tuyệt đối của một số là khoảng cách của số đó đến số 0 trên trục số, và luôn là một số không âm.`);
+let number3 = Math.ceil(4.4);
+let number4 = Math.ceil(5.8);
+console.log(`${number3} và ${number4} hàm Math.ceil() được sử dụng để làm tròn một số lên số nguyên gần nhất lớn hơn hoặc bằng số đó`);
+let number5 = Math.floor(5.7);
+let number6 = Math.floor(6.1);
+console.log(`${number5} và ${number6} hàm Math.floor() được sử dụng để làm tròn xuống một số thập phân đến số nguyên gần nhất nhỏ hơn hoặc bằng số đó`);
+let number7 = Math.round(10.1);
+let number8 = Math.round(20.6);
+console.log(`${number7} và ${number8} hàm Math.round() được sử dụng để làm tròn một số thập phân đến số nguyên gần nhất`);
