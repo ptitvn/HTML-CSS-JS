@@ -6,7 +6,7 @@ if (delta < 0) {
     console.log('Phương trình vô nghiệm');
 } else if (delta === 0) {
     const x = -b / (2 * a);
-    console.log(`Phương trình có nghiệm kép: x = ${x}`);
+    console.log(`Phương trình có nghiệm kép: x1 = x2 = ${x}`);
 } else {
     const x1 = (-b + Math.sqrt(delta)) / (2 * a);
     const x2 = (-b - Math.sqrt(delta)) / (2 * a);
