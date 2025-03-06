@@ -3,19 +3,19 @@ let counts = {};
 let maxCount = 0;
 let mostFrequent = arr[0];
 for (let i = 0; i < arr.length; i++) {
-  let num = arr[i];
-  if (counts[num] === undefined) {
-    counts[num] = 1;
+  let n = arr[i];
+  if (counts[n] === undefined) {
+    counts[n] = 1;
   } else {
-    counts[num]++;
+    counts[n]++;
   }
 }
-for (let num in counts) {
-  if (counts[num] > maxCount) {
-    maxCount = counts[num];
-    mostFrequent = Number(num); 
-  } else if (counts[num] === maxCount) {
-    if (Number(num) < mostFrequent) {
+for (let n in counts) {
+  if (counts[n] > maxCount) {
+    maxCount = counts[n];
+    mostFrequent = Number(n); 
+  } else if (counts[n] === maxCount) {
+    if (Number(n) < mostFrequent) {
       mostFrequent = Number(num); 
     }
   }
