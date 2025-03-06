@@ -31,7 +31,7 @@ for (let i = 1; i <= n; i++) {
     document.write(a);
   }
   document.write('<br>');
-
+ 
    n = 10;
   for (let i = n; i > 0; i--) {
     a = '';
@@ -43,4 +43,4 @@ for (let i = 1; i <= n; i++) {
     }
     document.write('<br>');
     document.write(a); 
-  }
+  } 
