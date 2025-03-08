@@ -21,3 +21,4 @@ for (let n in counts) {
   }
 }
 console.log("Phần tử xuất hiện nhiều nhất:", mostFrequent);
+ 
