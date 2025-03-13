@@ -1,14 +1,18 @@
 function tinhDienTichHinhChuNhat(chieuDai, chieuRong) {
-    return chieuDai * chieuRong;
+    if(Number.isInteger(chieuDai)&& Number.isInteger(chieuRong)) return chieuDai * chieuRong;
+    return "Không hợp lệ";
 }
 function tinhChuViHinhChuNhat(chieuDai, chieuRong) {
-    return 2 * (chieuDai + chieuRong);
+    if(Number.isInteger(chieuDai)&& Number.isInteger(chieuRong))return 2 * (chieuDai + chieuRong);
+    return "Không hợp lệ";
 }
 function tinhDienTichHinhTron(banKinh) {
-    return Math.PI * Math.pow(banKinh, 2);
+    if(Number.isInteger(banKinh))return Math.PI * Math.pow(banKinh, 2);
+    return "Không hợp lệ";
 }
 function tinhChuViHinhTron(banKinh) {
-    return 2 * Math.PI * banKinh;
+    if(Number.isInteger(banKinh))return 2 * Math.PI * banKinh;
+    return "Không hợp lệ";
 }
 function main(){
     let choice=0;
@@ -42,15 +46,13 @@ function main(){
                 wide = +prompt("Mời bạn nhập vào chiều rộng");
                 console.log(tinhChuViHinhChuNhat(length,wide));
                 break;
-            case 5:
-                
-                break;
+            
             default :
 
                 break;
 
         }
 
-    }while(choice!=5);
+    }while(choice!==0);
 }
 main();
