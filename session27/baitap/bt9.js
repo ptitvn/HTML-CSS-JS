@@ -1,4 +1,7 @@
 function sortEvenNumbers(arr) {
+    if(!Array.isArray(arr)){
+        return "Không phải là mảng"
+    }
     let evenNumbers = arr.filter(num => num % 2 === 0).sort((a, b) => a - b);
     let evenIndex = 0;
     return arr.map(num => {
