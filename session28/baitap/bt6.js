@@ -10,4 +10,4 @@ let cart = [
 ];
 
 let total = calculateTotal(cart);
-console.log(`Tổng tiền trong giỏ hàng là: ${total} VND`);
+console.log(`Tổng tiền trong giỏ hàng là: ${total} VND`); 

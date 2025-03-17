@@ -38,9 +38,6 @@ function findEmployeeByName(name) {
         console.log(`Không tìm thấy nhân viên với tên: ${name}`);
     }
 }
-
-
-
 function main() {
     let choice;
     do {
@@ -81,5 +78,4 @@ function main() {
         }
     } while (choice !== '6');
 }
-
 main();
