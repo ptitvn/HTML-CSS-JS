@@ -76,7 +76,7 @@ function containsUpperCase(str) {
     }
     
     registerUser(name,email,password);
-    //saveUser(name, email, password)
+    
   
 }
 function registerUser(name, email,password ) {

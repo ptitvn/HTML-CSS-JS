@@ -41,15 +41,12 @@ do {
             break;
     }
 } while (choice !=0);
-// Hàm thêm liên hệ mới
 function addContact(id, name, email, phone) {
-    // Kiểm tra ID đã tồn tại chưa
     if (contacts.find(contact => contact.id === id)) {
         console.log("ID đã tồn tại. Vui lòng nhập lại.");
         return;
     }
 
-    // Tạo đối tượng liên hệ mới
     let newContact = {
         id: id,
         name: name,
@@ -57,12 +54,10 @@ function addContact(id, name, email, phone) {
         phone: phone
     };
 
-    // Thêm liên hệ mới vào danh sách
     contacts.push(newContact);
     console.log("Liên hệ đã được thêm thành công.");
 }
 
-// Hàm hiển thị danh sách liên hệ
 function displayContacts() {
     console.log("Danh sách liên hệ:");
     contacts.forEach(contact => {
@@ -70,7 +65,6 @@ function displayContacts() {
     });
 }
 
-// Hàm tìm kiếm liên hệ theo số điện thoại
 function searchContactByPhone(phone) {
     let foundContact = contacts.find(contact => contact.phone === phone);
     if (foundContact) {
