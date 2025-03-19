@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        .red{
+            background-color: red;
+            border: none;
+        }
+        .green{
+            background-color: green;
+            border: none;
+
+        }
+        .pick{
+            background-color: pink;
+            border: none;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <p>change background-color</p>
+        <p>Mouse click</p>
+        <div class="container">
+            <div class="red">đỏ</div>
+            <div class="green"> xanh</div>
+            <div class="pick"> tím</div>
+        </div>
+        
+    </div>
+    
+    <script>
+      document.getElementsByClassName("red")[0].addEventListener("click",()=>{
+    document.getElementsByClassName("btn")[0].style.backgroundColor = "red"
+});
+document.getElementsByClassName("green")[0].addEventListener("click",()=>{
+    document.getElementsByClassName("btn")[0].style.backgroundColor = "green"
+
+});
+document.getElementsByClassName("pick")[0].addEventListener("click",()=>{
+    document.getElementsByClassName("btn")[0].style.backgroundColor = "pink"
+
+})
+    </script>
+</body>
+</html>

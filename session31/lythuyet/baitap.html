@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="" type="text" placeholder="Mời bạn nhập món ăn">
+    <button class="text">Thêm món ăn</button>
+    <ol>
+        
+    </ol>
+    <script>
+        let arr = [];
+        function render(){
+            let 
+            for(let i = 0;i<ol.length;i++){
+                text += `<li>${arr[i]}<li/>`
+            }
+            document.getElementsByClassName("ol")[0].innerHTML=text;
+        }
+        render();
+        function add(){
+            // lấy tên món ăn người dùng nhập vào
+            let name = document.getElementById("text").value;
+            arr.push(name);
+            render();
+            document.getElementById("text").value="";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        .main{
+            border: 1px solid;
+            margin: 300px 630px ;
+            width: 400px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+        }
+        .container1{
+            display: flex;
+            flex-direction: column;
+            gap: 13PX;
+        }
+        .container1 input{
+            width: 330px;
+            height: 25px;
+            border-radius: 3px;
+            border: 1px solid;
+        }
+        .container2{
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+        .container2 input{
+            width: 330px;
+            height: 25px;
+            border-radius: 3px;
+            border: 1px solid;
+        }
+        button{
+            width: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="container1">
+            <label for="username">username:</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="container2">
+            <label for="password">password:</label>
+            <input type="password" id="password" required>
+        </div>
+        <button onclick="login()">login</button>
+    </div>
+    
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'huanrose@gmail.com' && password === '123456') {
+                console.log('Đăng nhập thành công');
+            } else {
+                console.log('Đăng nhập thất bại');
+            }
+        }
+    </script>
+</body>
+</html>
