@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .text {
+            font-size: 20px; /* Kích thước chữ ban đầu */
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        .increase {
+            background-color: green;
+            color: white;
+        }
+        .decrease {
+            background-color: red;
+            color: white;
+        }
+        .button{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text" id="text">Chữ sẽ thay đổi kích thước khi bấm nút</div>
+    <div class="button">
+        <button class="increase" onclick="changeFontSize(2)">+</button>
+        <button class="decrease" onclick="changeFontSize(-2)">-</button>
+    </div>
+    
+
+    <script>
+        function changeFontSize(change) {
+            const textElement = document.getElementById('text');
+            // Lấy kích thước chữ hiện tại
+            const currentSize = parseInt(window.getComputedStyle(textElement).fontSize);
+            // Cập nhật kích thước chữ
+            textElement.style.fontSize = (currentSize + change) + 'px';
+        }
+    </script>
+
+</body>
+</html>

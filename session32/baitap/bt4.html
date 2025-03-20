@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .invalid {
+            color: red;
+        }
+        .valid {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="emailInput" placeholder="Nhập email của bạn">
+    <p id="result"></p>
+    <button onclick="validateEmail()">check</button>
+
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById('emailInput').value;
+            const result = document.getElementById('result');
+            if (emailInput.includes("@") && emailInput.endsWith(".com"||emailInput.endsWith(".vn"))) {
+                result.textContent = 'email hợp lệ!';
+                result.className = 'valid';
+            } else {
+                result.textContent = 'email không hợp lệ!';
+                result.className = 'invalid';
+            }
+        }
+    </script>
+</body>
+</html>

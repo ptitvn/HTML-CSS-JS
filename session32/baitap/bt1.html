@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colorDiv {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="colorDiv">
+        <button id="changeColorBtn">Đổi màu nền</button>
+    </div>
+
+    <script>
+        // Hàm để tạo màu ngẫu nhiên
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // nút khi click 
+        document.getElementById('changeColorBtn').addEventListener('click', function() {
+            document.getElementById('colorDiv').style.backgroundColor = getRandomColor();
+        });
+    </script>
+
+</body>
+</html>

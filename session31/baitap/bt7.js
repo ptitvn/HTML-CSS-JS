@@ -60,16 +60,15 @@ let todoList = [
     });
   }
   
-  const addButton = document.querySelector('.addBtn');
-  addButton.addEventListener('click', () => {
-    const input = document.getElementById('myInput');
-    const newTask = input.value.trim();
-    if (newTask) {
-      const newId = todoList.length ? todoList[todoList.length - 1].id + 1 : 1;
-      todoList.push({ id: newId, task: newTask, completed: false });
-      input.value = '';
-      renderList(); 
-    }
-  });
-  
+  // const addButton = document.querySelector('.addBtn');
+  // addButton.addEventListener('click', () => {
+  //   const input = document.getElementById('myInput');
+  //   const newTask = input.value.trim();
+  //   if (newTask) {
+  //     const newId = todoList.length ? todoList[todoList.length - 1].id + 1 : 1;
+  //     todoList.push({ id: newId, task: newTask, completed: false });
+  //     input.value = '';
+  //     renderList(); 
+  //   }
+  // });
   renderList();

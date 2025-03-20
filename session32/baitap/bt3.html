@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="monHocInput" placeholder="nhập tên môn học">
+    <button onclick="themMonHoc()">Thêm môn học</button>
+    <ul id="danhSachMonHoc">
+        <li>1. Toán</li>
+        <li>2. Lý</li>
+        <li>3. Hóa</li>
+    </ul>
+
+    <script >
+        function themMonHoc() {
+    // Lấy giá trị từ ô nhập
+    const monHocInput = document.getElementById('monHocInput').value;
+    const danhSachMonHoc = document.getElementById('danhSachMonHoc');
+
+    // Kiểm tra xem ô nhập có trống không
+    if (monHocInput.trim() === '') {
+        alert("Tên môn học không được để trống!");
+    } else {
+        // Tạo một phần tử mới cho môn học
+        const li = document.createElement('li');
+        li.textContent = danhSachMonHoc.children.length + 1 + '. ' + monHocInput;
+        
+        // Thêm phần tử mới vào danh sách
+        danhSachMonHoc.appendChild(li);
+        
+        // Xóa nội dung ô nhập
+        document.getElementById('monHocInput').value = '';
+    }
+}
+    </script>
+</body>
+</html>

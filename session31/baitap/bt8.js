@@ -53,7 +53,6 @@ let todoList = [
       displayTasks(); 
     }
   }
-  
 
   document.querySelector('.addBtn').addEventListener('click', addTask);
   

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Image Gallery</title>
+    <link rel="stylesheet" href="bt7.css">
+</head>
+<body>
+
+<div class="gallery">
+    <img src="https://th.bing.com/th?id=OIP.DiimB6mldSRGMfl7l7fx5QHaFH&w=300&h=207&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Cá sấu" class="thumbnail" onclick="openModal(this.src)">
+    <img src="https://th.bing.com/th?id=OIP.iKV7CaCptwZ3YUxWbgHmogHaEO&w=330&h=189&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Rắn" class="thumbnail" onclick="openModal(this.src)">
+    <img src="https://th.bing.com/th?id=OIP.yyjszq1VtVJ8yBSgaOjSsAHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Thỏ" class="thumbnail" onclick="openModal(this.src)">
+</div>
+
+<div class="modal" id="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+    function openModal(src) {
+    var modal = document.getElementById("modal");
+    var modalImage = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImage.src = src;
+}
+
+function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+</script>
+</body>
+</html>
