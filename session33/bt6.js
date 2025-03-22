@@ -32,7 +32,7 @@ function getWeather(city) {
         return null; // Nếu thành phố không tồn tại
     }
 }
-// Lắng nghe sự kiện cho nút tìm kiếm
+//  cho nút tìm kiếm
 document.getElementById("search-button").addEventListener("click", function() {
     const cityInput = document.getElementById("city-input").value;
     const weather = getWeather(cityInput);
