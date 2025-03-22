@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #countDisplay {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="inputText" rows="4" cols="50" placeholder="Nhập văn bản ở đây..."></textarea><br>
+    <div id="countDisplay">0 ký tự</div>
+    <button id="countButton">Kiểm tra</button>
+
+    <script>
+       
+        document.getElementById('countButton').addEventListener('click', function() {
+            // Lấy nội dung từ textarea
+            const text = document.getElementById('inputText').value;
+            // Đếm số ký tự
+            const characterCount = text.length;
+            // Hiển thị số ký tự lên màn hình
+            document.getElementById('countDisplay').innerText = characterCount + " ký tự";
+        });
+    </script>
+</body>
+</html>

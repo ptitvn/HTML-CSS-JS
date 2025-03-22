@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1f5fe; /* Màu nền giống màu trong ảnh */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto; /* Căn giữa trên và dưới */
+    padding: 20px;
+    background-color: #ffffff; /* Màu nền trắng cho container */
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 75%; /* Chiều rộng của trường nhập */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #2196F3; /* Màu xanh giống trong ảnh */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Con trỏ khi hover */
+}
+
+button:hover {
+    background-color: #1976D2; /* Màu khi hover */
+}
+
+.weather-card {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.error {
+    color: red;
+    margin-top: 10px; /* Khoảng cách giữa thông báo lỗi và thông tin thời tiết */
+}

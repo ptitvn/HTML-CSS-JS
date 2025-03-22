@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            margin: 10px;
+        }
+        #searchButton{
+            background-color: rgba(7, 203, 7, 0.715);
+            margin-bottom: 9px;
+        }
+        .my-3{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Danh Sách Sản Phẩm</h1>
+        <div class="my-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+            <button id="searchButton" class="btn btn-primary mt-2">Search</button>
+        </div>
+        <div id="productList" class="row"></div>
+    </div>
+
+    <script src="bt5.js"></script>
+</body>
+</html>

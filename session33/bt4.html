@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main{
+            display: flex;
+            flex-direction:row ;
+            gap: 20px;
+        }
+        .main button{
+            width: 70px;
+            height: 35px;
+            border-radius: 3px;
+            border: none;
+            background-color: rgb(14, 208, 23);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Danh Sách Sản Phẩm</h1>
+        <div class="main">
+            <input type="text" id="searchInput" class="form-control mb-3" placeholder="Tìm kiếm sản phẩm...">
+            <button>search </button>
+        </div>
+        
+        <div class="row" id="productList"></div>
+    </div>
+
+    <script src="bt4.js"></script>
+</body>
+
+</html>
