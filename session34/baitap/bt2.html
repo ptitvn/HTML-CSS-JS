@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            
+            background-color: lightgray;
+        }
+
+        .container {
+            margin: auto;
+            margin-top: 100px;
+            height: 300px;
+            width: 700px;
+            background-color: white;
+            padding-top: 20px;
+            border-radius: 5px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        .date {
+            height: 32px;
+            border-radius: 5px;
+            border: 1px solid;
+            margin-right: 5px;
+        }
+
+        .choice {
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid;
+            margin-right: 5px;
+        }
+
+        .name {
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid;
+            margin-right: 5px;
+        }
+
+        .btn {
+            height: 35px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .content1 {
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 600px;
+            height: 130px;
+        }
+
+        .tablehead {
+            text-align: left;
+            border: 0px;
+            background-color: #F4F4F4;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            height: 30px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="container">
+            <h2 class="title">Task Management</h2>
+            <input class="content" type="text" id="taskContent" placeholder="Content">
+            <input class="date" type="date" id="taskDate">
+            <select class="choice" id="taskStatus">
+                <option value="Pending">Choose status</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <input class="name" type="text" id="taskAssignedTo" placeholder="Username">
+            <button class="btn" id="submitBtn">Submit</button>
+            <table class="content1">
+                <thead class="tablehead">
+                    <tr>
+                        <th>#</th>
+                        <th>Content</th>
+                        <th>Due date</th>
+                        <th>Status</th>
+                        <th>Assigned to</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class="row1">
+                        <td>1</td>
+                        <td>Learn javascript Session 01</td>
+                        <td>2023-04-17</td>
+                        <td>Pending</td>
+                        <td>Anh Bách</td>
+                        <td>
+                            <button>Sửa</button>
+                            <button>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Learn javascript Session 2</td>
+                        <td>2023-04-17</td>
+                        <td>Pending</td>
+                        <td>Lâm</td>
+                        <td>
+                            <button>Sửa</button>
+                            <button>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Learn CSS Sesson 1</td>
+                        <td>2023-04-17</td>
+                        <td>Pending</td>
+                        <td>Hiếu Ci ớt ớt</td>
+                        <td>
+                            <button>Sửa</button>
+                            <button>Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            
+        </table>
+    </div>
+</div>
+
+<script src="./bt2.js">
+    const courses = [
+{
+    id: 1,
+    content: 'Learn Javascript Session 01',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Anh Bách',
+},
+{
+    id: 2,
+    content: 'Learn Javascript Session 2',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Lâm',
+},
+{
+    id: 3,
+    content: 'Learn CSS Session 1',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Hiếu Ci ớt ớt',
+},];
+</script>
+</body>
+
+</html>

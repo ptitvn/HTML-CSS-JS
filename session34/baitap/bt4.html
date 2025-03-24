@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4">Todo List</h1>
+        <div class="flex mb-4">
+            <input type="text" id="todoInput" placeholder="Thêm việc cần làm..." class="border border-gray-300 rounded-l px-4 py-2 flex-grow">
+            <button id="addButton" class="bg-green-500 text-white px-4 py-2 rounded-r">Thêm</button>
+        </div>
+        <ul id="todoList">
+            <!-- Các mục todo sẽ được thêm vào đây -->
+        </ul>
+    </div>
+
+    <script>
+        const todoInput = document.getElementById('todoInput');
+        const addButton = document.getElementById('addButton');
+        const todoList = document.getElementById('todoList');
+
+        // Hàm để lấy danh sách todo từ Local Storage
+        function getTodos() {
+            const todos = JSON.parse(localStorage.getItem('todos')) || [];
+            return todos;
+        }
+
+        // Hàm để lưu danh sách todo vào Local Storage
+        function saveTodos(todos) {
+            localStorage.setItem('todos', JSON.stringify(todos));
+        }
+
+        // Hàm để hiển thị danh sách todo
+        function renderTodos() {
+            const todos = getTodos();
+            todoList.innerHTML = '';
+            todos.forEach((todo, index) => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center mb-2';
+                li.innerHTML = `
+                    <span>${todo}</span>
+                    <button class="bg-red-500 text-white px-4 py-1 rounded" onclick="deleteTodo(${index})">Xóa</button>
+                `;
+                todoList.appendChild(li);
+            });
+        }
+
+        // Hàm để thêm todo
+        function addTodo() {
+            const todoText = todoInput.value.trim();
+            if (todoText) {
+                const todos = getTodos();
+                todos.push(todoText);
+                saveTodos(todos);
+                todoInput.value = '';
+                renderTodos();
+            }
+        }
+
+        // Hàm để xóa todo
+        function deleteTodo(index) {
+            const todos = getTodos();
+            todos.splice(index, 1);
+            saveTodos(todos);
+            renderTodos();
+        }
+
+        // Sự kiện khi nhấn nút "Thêm"
+        addButton.addEventListener('click', addTodo);
+
+        // Hiển thị danh sách todo khi tải trang
+        renderTodos();
+    </script>
+</body>
+</html>

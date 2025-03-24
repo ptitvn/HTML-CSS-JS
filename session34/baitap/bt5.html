@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Danh sách nhân viên Rikkei</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-2xl">
+        <h1 class="text-2xl font-bold text-center mb-6">Danh sách nhân viên Rikkei</h1>
+        <div class="flex justify-center mb-4">
+            <input type="text" id="employeeName" placeholder="tên nhân viên" class="border border-gray-300 p-2 mr-2">
+            <input type="text" id="employeePosition" placeholder="chức vụ" class="border border-gray-300 p-2">
+        </div>
+        <div class="flex justify-center mb-4">
+            <button id="addEmployeeBtn" class="bg-gray-200 border border-gray-300 p-2">thêm nhân viên</button>
+        </div>
+        <table class="min-w-full bg-white border border-gray-300" id="employeeTable">
+            <thead>
+                <tr>
+                    <th class="border border-gray-300 px-4 py-2">STT</th>
+                    <th class="border border-gray-300 px-4 py-2">Tên</th>
+                    <th class="border border-gray-300 px-4 py-2">Chức vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu nhân viên sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Hàm để lấy danh sách nhân viên từ localStorage
+        function getEmployees() {
+            const employees = localStorage.getItem('employees');
+            return employees ? JSON.parse(employees) : [];
+        }
+
+        // Hàm để hiển thị danh sách nhân viên
+        function displayEmployees() {
+            const employees = getEmployees();
+            const employeeTableBody = document.querySelector('#employeeTable tbody');
+            employeeTableBody.innerHTML = ''; // Xóa nội dung hiện tại
+
+            employees.forEach((employee, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="border border-gray-300 px-4 py-2 text-center">${index + 1}</td>
+                    <td class="border border-gray-300 px-4 py-2">${employee.name}</td>
+                    <td class="border border-gray-300 px-4 py-2">${employee.position}</td>
+                `;
+                employeeTableBody.appendChild(row);
+            });
+        }
+
+        // Hàm để thêm nhân viên mới
+        function addEmployee() {
+            const name = document.getElementById('employeeName').value;
+            const position = document.getElementById('employeePosition').value;
+
+            if (name && position) {
+                const employees = getEmployees();
+                employees.push({ name, position });
+                localStorage.setItem('employees', JSON.stringify(employees));
+                document.getElementById('employeeName').value = '';
+                document.getElementById('employeePosition').value = '';
+                displayEmployees();
+            } else {
+                alert('Vui lòng nhập tên và chức vụ!');
+            }
+        }
+
+        // Gán sự kiện cho nút thêm nhân viên
+        document.getElementById('addEmployeeBtn').addEventListener('click', addEmployee);
+
+        // Hiển thị danh sách nhân viên khi trang được tải
+        displayEmployees();
+    </script>
+</body>
+</html>
