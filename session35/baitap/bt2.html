@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="bt2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bookmark Manager</h1>
+        <button id="addBookmarkBtn">Add Bookmark</button>
+        <div id="bookmarkList"></div>
+        
+        <div id="bookmarkModal" class="modal">
+            <div class="modal-content">
+                <div class="headline">
+                    <span class="close">&times;</span>
+                    <h2>Add Bookmark</h2>
+                </div>
+                <div class="input">
+                    <label for="">websiteName</label>
+                    <input type="text" id="websiteName" placeholder="Tên website">
+                    <label for="">websiteURL</label>
+                    <input type="text" id="websiteURL" placeholder="URL website">
+                    <button id="saveBtn">Save</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="bt2.js"></script>
+</body>
+</html>

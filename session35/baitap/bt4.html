@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên Rikkei</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin: 5px;
+        }
+        #employeeTable{
+            width: 500px;
+        }
+        .main{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 500px;
+            justify-content: center;
+        }
+        #pagination{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Danh sách nhân viên Rikkei</h1>
+        <div class="container">
+            <label for="">Tên nhân viên: </label>
+            <input type="text" id="name" placeholder="Tên nhân viên">
+            <label for="">chức vụ: </label>
+            <input type="text" id="position" placeholder="Chức vụ">
+            <button onclick="addEmployee()">Thêm nhân viên</button>
+        </div>
+        
+    
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Chức vụ</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    
+        <div id="pagination"></div>
+    </div>
+    
+
+    <script src="bt4.js"></script>
+</body>
+</html>

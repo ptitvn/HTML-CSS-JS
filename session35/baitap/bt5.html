@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý danh mục</title>
+    <link rel="stylesheet" href="bt5.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Danh mục</h1>
+    <button id="addCategoryBtn">Thêm mới danh mục</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Trạng thái</th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody id="categoryList"></tbody>
+    </table>
+</div>
+
+<!-- Modal Form -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Thêm mới danh mục</h2>
+        <input type="text" id="categoryCode" placeholder="Mã danh mục">
+        <input type="text" id="categoryName" placeholder="Tên danh mục">
+        <select id="categoryStatus">
+            <option value="Dang hoat dong">Đang hoạt động</option>
+            <option value="Ngung hoat dong">Ngừng hoạt động</option>
+        </select>
+        <button id="submitCategory">Thêm</button>
+        <div id="validation-errors"></div>
+    </div>
+</div>
+
+<script src="bt5.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4B0082; /* Màu nền */
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    background-color: #6A5ACD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: #5A4CC2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #4B0082;
+    margin: 15% auto; 
+    border: 1px solid #888;
+    width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bookmark {
+    display: inline-block;
+    background-color: #7D3FFF;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    gap: 5px;
+    background-color: white;
+    padding: 20px;
+    color: #5e1d8d ;
+}
+.input input{
+    width: 300px;
+}
+.deleteBtn{
+    width: 50px;
+    height: 30px;
+}
