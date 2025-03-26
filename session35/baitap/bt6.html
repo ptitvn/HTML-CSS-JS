@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 p-6">
+    <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">Danh mục</h1>
+            <button id="addCategoryBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Thêm mới danh mục</button>
+        </div>
+        
+        <div class="flex justify-between items-center mb-4">
+            <select id="statusFilter" class="border border-gray-300 rounded-lg px-4 py-2" onchange="filterCategories()">
+                <option value="all">Tất cả</option>
+                <option value="active">Đang hoạt động</option>
+                <option value="inactive">Ngừng hoạt động</option>
+            </select>
+            <div class="relative">
+                <input type="text" id="searchInput" class="border border-gray-300 rounded-lg px-4 py-2 pl-10" placeholder="Tìm kiếm danh mục theo tên" oninput="searchCategories()">
+                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+        </div>
+        
+        <table class="min-w-full bg-white" id="categoryTable">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 border-b">Mã danh mục</th>
+                    <th class="py-2 px-4 border-b">Tên danh mục</th>
+                    <th class="py-2 px-4 border-b">Trạng thái</th>
+                    <th class="py-2 px-4 border-b">Chức năng</th>
+                </tr>
+            </thead>
+            <tbody id="categoryList"></tbody>
+        </table>
+
+        <!-- Form Modal -->
+        <div id="categoryForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Thêm mới danh mục</h2>
+                <input type="text" id="newCategoryCode" class="border border-gray-300 rounded-lg px-4 py-2 mb-2" placeholder="Mã danh mục" />
+                <input type="text" id="newCategoryName" class="border border-gray-300 rounded-lg px-4 py-2 mb-2" placeholder="Tên danh mục" />
+                <select id="newCategoryStatus" class="border border-gray-300 rounded-lg px-4 py-2 mb-4">
+                    <option value="active">Đang hoạt động</option>
+                    <option value="inactive">Ngừng hoạt động</option>
+                </select>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" onclick="addCategory()">Thêm</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded-lg ml-2" onclick="closeForm()">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const categoryTable = document.getElementById('categoryList');
+        const categoryForm = document.getElementById('categoryForm');
+        let categories = JSON.parse(localStorage.getItem('categories')) || [];
+
+        function renderCategories() {
+            categoryTable.innerHTML = '';
+            const statusFilter = document.getElementById('statusFilter').value;
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+            categories.forEach(category => {
+                if ((statusFilter === 'all' || (statusFilter === 'active' && category.status === 'active') || (statusFilter === 'inactive' && category.status === 'inactive')) &&
+                    category.name.toLowerCase().includes(searchInput)) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td class="py-2 px-4 border-b">${category.code}</td>
+                        <td class="py-2 px-4 border-b">${category.name}</td>
+                        <td class="py-2 px-4 border-b"><span class="${category.status === 'active' ? 'text-green-500 bg-green-100' : 'text-red-500 bg-red-100'} px-2 py-1 rounded-full">${category.status === 'active' ? 'Đang hoạt động' : 'Ngừng hoạt động'}</span></td>
+                        <td class="py-2 px-4 border-b">
+                            <i class="fas fa-trash-alt text-red-500 cursor-pointer" onclick="deleteCategory('${category.code}')"></i>
+                            <i class="fas fa-edit text-yellow-500 cursor-pointer ml-2"></i>
+                        </td>
+                    `;
+                    categoryTable.appendChild(row);
+                }
+            });
+        }
+
+        function addCategory() {
+            const code = document.getElementById('newCategoryCode').value.trim();
+            const name = document.getElementById('newCategoryName').value.trim();
+            const status = document.getElementById('newCategoryStatus').value;
+            
+            if (!code || !name) {
+                alert('Vui lòng nhập mã danh mục và tên danh mục.');
+                return;
+            }
+
+            const newCategory = { code, name, status };
+            categories.push(newCategory);
+            localStorage.setItem('categories', JSON.stringify(categories));
+            closeForm();
+            renderCategories();
+        }
+
+        function deleteCategory(code) {
+            categories = categories.filter(category => category.code !== code);
+            localStorage.setItem('categories', JSON.stringify(categories));
+            renderCategories();
+        }
+
+        function openForm() {
+            categoryForm.classList.remove('hidden');
+        }
+
+        function closeForm() {
+            categoryForm.classList.add('hidden');
+            document.getElementById('newCategoryCode').value = '';
+            document.getElementById('newCategoryName').value = '';
+            document.getElementById('newCategoryStatus').value = 'active';
+        }
+
+        function filterCategories() {
+            renderCategories();
+        }
+
+        function searchCategories() {
+            renderCategories();
+        }
+
+        document.getElementById('addCategoryBtn').onclick = openForm;
+        window.onload = renderCategories;
+
+    </script>
+</body>
+
+</html>
