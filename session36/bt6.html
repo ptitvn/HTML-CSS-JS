@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống đánh giá sản phẩm</title>
+    <link rel="stylesheet" href="./bt6.css" />
+  </head>
+  <body>
+    <div class="product">
+      <h2>Sản phẩm: Tai nghe Bluetooth</h2>
+      <img
+        src="https://imgs.search.brave.com/JRPdDRzOPxD2puv-eXZx8AiHMt7ySnUVRZs4uCbu7CI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/NDk2NjY4Ni9waG90/by9iZWlqaW5nLWNo/aW5hLWFpcnBvZHMt/bWF4LWlzLXNlZW4t/YXQtYW4tYXBwbGUt/c3RvcmUtb24tamFu/dWFyeS0yLTIwMjEt/aW4tYmVpamluZy1j/aGluYS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9aXlyd0Np/TkJ6UW9jZzdUTHEt/LTNpNGM5dXpiTkda/NHprOW4tdUwwRWtk/Zz0"
+        alt=""
+      />
+      <p>Đánh giá sản phẩm:</p>
+      <div id="rating">
+        <span class="stars" data-value="1">★</span>
+        <span class="stars" data-value="2">★</span>
+        <span class="stars" data-value="3">★</span>
+        <span class="stars" data-value="4">★</span>
+        <span class="stars" data-value="5">★</span>
+      </div>
+      <p id="selected-rating">Bạn chưa đánh giá.</p>
+
+      <!-- Bình luận -->
+      <div class="comment-section">
+        <h3>Bình luận</h3>
+        <textarea
+          id="comment-input"
+          class="comment-box"
+          placeholder="Nhập bình luận..."
+        ></textarea>
+        <button onclick="submitReview()">Gửi</button>
+        <ul id="comment-list" class="comment-list">
+          <!-- sử dụng thẻ li và bên trong là thẻ span chứa sao và thẻ b chưa nội dung đánh giá -->
+          <!-- <li> <span>★★★★★<span> <b>Hay qué</b> </li> -->
+        </ul>
+      </div>
+    </div>
+    <script>
+      // Load existing reviews from Local Storage when the page loads
+      document.addEventListener("DOMContentLoaded", loadReviews);
+
+      // Function to handle star rating selection
+      const stars = document.querySelectorAll(".stars");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("click", function () {
+          selectedRating = this.getAttribute("data-value");
+          updateRatingDisplay();
+        });
+
+        star.addEventListener("mouseover", function () {
+          highlightStars(this.getAttribute("data-value"));
+        });
+
+        star.addEventListener("mouseout", function () {
+          highlightStars(selectedRating);
+        });
+      });
+
+      // Update the visual representation of the rating
+      function highlightStars(rating) {
+        stars.forEach((star) => {
+          star.classList.remove("active");
+          if (star.getAttribute("data-value") <= rating) {
+            star.classList.add("active");
+          }
+        });
+      }
+
+      // Function to submit the review
+      function submitReview() {
+        const commentInput = document.getElementById("comment-input");
+        const commentText = commentInput.value.trim();
+
+        if (!commentText || !selectedRating) {
+          alert("Vui lòng chọn số sao và nhập bình luận.");
+          return;
+        }
+
+        const review = {
+          rating: selectedRating,
+          comment: commentText,
+        };
+
+        saveReviewToLocalStorage(review);
+
+        commentInput.value = "";
+        selectedRating = 0;
+        updateRatingDisplay();
+        renderReviews();
+      }
+
+      // Function to save the review to Local Storage
+      function saveReviewToLocalStorage(review) {
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+      }
+
+      // Load and display reviews from Local Storage
+      function loadReviews() {
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.forEach((review) => renderReview(review));
+      }
+
+      // Update the rating display
+      function updateRatingDisplay() {
+        const selectedRatingDisplay =
+          document.getElementById("selected-rating");
+        if (selectedRating) {
+          selectedRatingDisplay.innerText = `Bạn đã chọn ${selectedRating} sao.`;
+        } else {
+          selectedRatingDisplay.innerText = "Bạn chưa đánh giá.";
+        }
+        renderReviews();
+      }
+
+      // Render all reviews to the comment list
+      function renderReviews() {
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        const commentList = document.getElementById("comment-list");
+        commentList.innerHTML = ""; // Clear previous comments
+
+        reviews.forEach((review) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<span>${"★".repeat(review.rating)}${"☆".repeat(
+            5 - review.rating
+          )}</span> <b>${review.comment}</b>`;
+          commentList.appendChild(li);
+        });
+      }
+
+      // Function to render a single review
+      function renderReview(review) {
+        const commentList = document.getElementById("comment-list");
+        const li = document.createElement("li");
+        li.innerHTML = `<span>${"★".repeat(review.rating)}${"☆".repeat(
+          5 - review.rating
+        )}</span> <b>${review.comment}</b>`;
+        commentList.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

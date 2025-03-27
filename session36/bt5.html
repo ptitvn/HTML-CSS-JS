@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bt5.css" />
+  </head>
+  <body>
+    <h2>🗂️ Quản lý công việc (Task Board)</h2>
+
+    <div class="task-input">
+      <input type="text" id="taskName" placeholder="Nhập tên công việc..." />
+      <button>Thêm</button>
+    </div>
+
+    <div class="board">
+      <div class="column" id="pendingCol">
+        <h3>🕐 Chờ xử lý</h3>
+        <div id="pendingTasks">
+          <!-- <div class="task">
+            <p>Nội dung</p>
+            <button>Chuyển tiếp</button>
+          </div> -->
+        </div>
+      </div>
+      <div class="column" id="inProgressCol">
+        <h3>🔨 Đang làm</h3>
+        <div id="inProgressTasks"></div>
+      </div>
+      <div class="column" id="doneCol">
+        <h3>✅ Hoàn thành</h3>
+        <div id="doneTasks">
+          <!-- <div class="task">
+            <p>Nội dung</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script>
+      const taskInput = document.getElementById("taskName");
+      const addButton = document.querySelector("button");
+      const pendingTasksContainer = document.getElementById("pendingTasks");
+      const inProgressTasksContainer =
+        document.getElementById("inProgressTasks");
+      const doneTasksContainer = document.getElementById("doneTasks");
+
+      // tạo tác vụ trong mảng lên local
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+      // hiện thị nhiệm vụ ở dưới thanh
+      function renderTasks() {
+        // xóa nội dung html hiện có
+        pendingTasksContainer.innerHTML = "";
+        inProgressTasksContainer.innerHTML = "";
+        doneTasksContainer.innerHTML = "";
+
+        // lặp lại các tác vụ vào html
+        tasks.forEach((task, index) => {
+          const taskElem = document.createElement("div");
+          taskElem.className = "task";
+          taskElem.innerHTML = `
+      <p>${task.name}</p>
+      <button onclick="changeStatus(${index})">Chuyển trạng thái</button>
+    `;
+          if (task.status === "pending") {
+            pendingTasksContainer.appendChild(taskElem);
+          } else if (task.status === "in-progress") {
+            inProgressTasksContainer.appendChild(taskElem);
+          } else if (task.status === "done") {
+            doneTasksContainer.appendChild(taskElem);
+          }
+        });
+      }
+
+      // thêm nhiệm vụ
+      function addTask() {
+        const taskName = taskInput.value.trim();
+        if (!taskName) return;
+
+        const newTask = {
+          name: taskName,
+          status: "pending",
+        };
+        tasks.push(newTask);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        taskInput.value = "";
+        renderTasks();
+      }
+
+      // Chức năng thay đổi trạng thái nhiệm vụ
+      function changeStatus(index) {
+        const task = tasks[index];
+        if (task.status === "pending") {
+          task.status = "in-progress";
+        } else if (task.status === "in-progress") {
+          task.status = "done";
+        }
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        renderTasks();
+      }
+
+      // nghe sự kiện của nút button
+      addButton.addEventListener("click", addTask);
+      // hiện thị nhiệm vụ
+      function renderTasks() {
+        
+        pendingTasksContainer.innerHTML = "";
+        inProgressTasksContainer.innerHTML = "";
+        doneTasksContainer.innerHTML = "";
+
+        // lặp lại các tác vụ html
+        tasks.forEach((task, index) => {
+          const taskElem = document.createElement("div");
+          taskElem.className = "task";
+          taskElem.innerHTML = `
+      <p>${task.name}</p>
+      ${
+        task.status !== "done"
+          ? `<button onclick="changeStatus(${index})">Chuyển trạng thái</button>`: ""
+      }
+    `;
+          if (task.status === "pending") {
+            pendingTasksContainer.appendChild(taskElem);
+          } else if (task.status === "in-progress") {
+            inProgressTasksContainer.appendChild(taskElem);
+          } else if (task.status === "done") {
+            doneTasksContainer.appendChild(taskElem);
+          }
+        });
+      }
+      renderTasks();
+    </script>
+  </body>
+</html>

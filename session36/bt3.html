@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Màu Nền</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+
+
+.buttons {
+    margin: 20px 0;
+}
+
+.color-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.color-button[data-color="red"] {
+    background-color: red;
+}
+
+.color-button[data-color="blue"] {
+    background-color: blue;
+}
+
+.color-button[data-color="yellow"] {
+    background-color: yellow;
+}
+
+.color-button[data-color="purple"] {
+    background-color: purple;
+}
+    </style>
+</head>
+<body>
+    <div >
+        <h1>Chọn màu nền bạn yêu thích</h1>
+        <div class="buttons">
+            <button class="color-button" data-color="red">Đỏ</button>
+            <button class="color-button" data-color="blue">Xanh</button>
+            <button class="color-button" data-color="yellow">Vàng</button>
+            <button class="color-button" data-color="purple">Tím</button>
+        </div>
+        <p>Trang sẽ ghi nhớ màu bạn đã chọn kể cả khi tải lại!</p>
+    </div>
+    <script >
+        // Hàm để thay đổi màu nền và lưu màu vào localStorage
+        function changeBackgroundColor(color) {
+             document.body.style.backgroundColor = color;
+            localStorage.setItem('backgroundColor', color);
+        }
+
+        // Hàm để lấy màu nền từ localStorage khi tải trang
+        function loadBackgroundColor() {
+            const storedColor = localStorage.getItem('backgroundColor');
+            if (storedColor) {
+                document.body.style.backgroundColor = storedColor;
+            }
+        }
+
+        // Gọi hàm khi trang được tải
+        loadBackgroundColor();
+
+        // Lấy tất cả các nút và thêm sự kiện click
+        const buttons = document.querySelectorAll('.color-button');
+        buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const color = button.getAttribute('data-color');
+            changeBackgroundColor(color);
+            });
+        });
+    </script>
+</body>
+</html>
