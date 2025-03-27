@@ -39,10 +39,10 @@
       </div>
     </div>
     <script>
-      // Load existing reviews from Local Storage when the page loads
+    
       document.addEventListener("DOMContentLoaded", loadReviews);
 
-      // Function to handle star rating selection
+
       const stars = document.querySelectorAll(".stars");
       let selectedRating = 0;
 
@@ -61,7 +61,6 @@
         });
       });
 
-      // Update the visual representation of the rating
       function highlightStars(rating) {
         stars.forEach((star) => {
           star.classList.remove("active");
@@ -71,7 +70,7 @@
         });
       }
 
-      // Function to submit the review
+
       function submitReview() {
         const commentInput = document.getElementById("comment-input");
         const commentText = commentInput.value.trim();
@@ -94,20 +93,17 @@
         renderReviews();
       }
 
-      // Function to save the review to Local Storage
       function saveReviewToLocalStorage(review) {
         const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
         reviews.push(review);
         localStorage.setItem("reviews", JSON.stringify(reviews));
       }
 
-      // Load and display reviews from Local Storage
       function loadReviews() {
         const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
         reviews.forEach((review) => renderReview(review));
       }
 
-      // Update the rating display
       function updateRatingDisplay() {
         const selectedRatingDisplay =
           document.getElementById("selected-rating");
@@ -119,11 +115,10 @@
         renderReviews();
       }
 
-      // Render all reviews to the comment list
       function renderReviews() {
         const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
         const commentList = document.getElementById("comment-list");
-        commentList.innerHTML = ""; // Clear previous comments
+        commentList.innerHTML = "";
 
         reviews.forEach((review) => {
           const li = document.createElement("li");
@@ -134,7 +129,6 @@
         });
       }
 
-      // Function to render a single review
       function renderReview(review) {
         const commentList = document.getElementById("comment-list");
         const li = document.createElement("li");
